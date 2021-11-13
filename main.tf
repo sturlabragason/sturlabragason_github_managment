@@ -3,7 +3,6 @@ terraform {
     github = {
       source  = "integrations/github"
       version = "~> 4.0"
-      owner   = "sturlabragason"
     }
   }
 }
@@ -11,4 +10,5 @@ terraform {
 # Configure the GitHub Provider
 provider "github" {
     token = var.pat
+    owner   = "sturlabragason"
 }
