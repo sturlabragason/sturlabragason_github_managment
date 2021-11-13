@@ -1,10 +1,5 @@
 name: Delete old workflow runs
-on:
-  workflow_run:
-    workflows: ["Setup and run Terraform"]
-    branches: [main]
-    types:
-      - completed
+on: [push]
 
 name: Delete old runs for specific work flow
 on:
