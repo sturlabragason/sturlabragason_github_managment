@@ -1,15 +1,5 @@
 name: Delete old runs for specific work flow
-on:
-  workflow_dispatch:
-    inputs:
-      minimumRunsToKeep:
-        description: 'Number of workflow runs to keep'
-        required: true
-        default: 10
-      workflowName:
-        description: 'Name of workflow to delete from'
-        required: true
-        default: 'Setup and run Terraform'
+on: [ push ]    
 
 jobs:
   del_runs:
@@ -20,5 +10,5 @@ jobs:
         with:
           token: ${{ secrets.pat }}
           repository: ${{ github.repository }}
-          keep_minimum_runs: ${{ github.event.inputs.minimumRunsToKeep }}
-          workflow_name: ${{ github.event.inputs.workflowName }}
+          keep_minimum_runs: '10'
+          workflow_name: 'Setup and run Terraform'
