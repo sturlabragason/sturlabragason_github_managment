@@ -1,4 +1,4 @@
-name: Delete old runs for specific work flow
+name: Delete old runs
 on: [ push ]    
 
 jobs:
@@ -12,3 +12,13 @@ jobs:
           repository: ${{ github.repository }}
           keep_minimum_runs: '10'
           workflow_name: 'Setup and run Terraform'
+  del_runs_meta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete it's own workflow runs
+        uses: mwigginsdev/delete-oldest-workflow-runs@main
+        with:
+          token: ${{ secrets.pat }}
+          repository: ${{ github.repository }}
+          keep_minimum_runs: '10'
+          workflow_name: 'Delete old runs'
