@@ -1,5 +1,3 @@
-on: [push]
-
 name: Delete old runs for specific work flow
 on:
   workflow_dispatch:
