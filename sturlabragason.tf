@@ -65,3 +65,15 @@ resource "github_repository" "terraform_state_artifact" {
   homepage_url = "https://github.com/sturlabragason/terraform_state_artifact"
   license_template = "gpl-3.0"
 }
+
+ ####################################
+ ####    sturlabragason_xmrig    ####
+ ####################################
+
+ resource "github_repository" "sturlabragason_xmrig" {
+  name        = "sturlabragason_xmrig"
+  description = "A clone of xmrig with donations lowered."
+  visibility = "private"
+  auto_init = true
+  license_template = "gpl-3.0"
+}
