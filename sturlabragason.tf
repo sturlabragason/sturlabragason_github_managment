@@ -37,7 +37,7 @@ resource "github_repository_file" "sturlabragason_github_io_readme" {
  ####    sturlabragason_github_managment    ####
  ###############################################
 
-data "github_repository" "example" {
+data "github_repository" "sturlabragason_github_managment" {
   full_name = "sturlabragason/sturlabragason_github_managment"
 }
 
@@ -64,6 +64,12 @@ resource "github_repository" "terraform_state_artifact" {
   auto_init = true
   homepage_url = "https://github.com/sturlabragason/terraform_state_artifact"
   license_template = "gpl-3.0"
+}
+
+resource "github_actions_secret" "terraform_state_artifact_pat" {
+  repository       = github_repository.terraform_state_artifact.name
+  secret_name      = "pat"
+  plaintext_value  = var.pat
 }
 
  ####################################
