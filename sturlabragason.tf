@@ -66,12 +66,6 @@ resource "github_repository" "terraform_state_artifact" {
   license_template = "gpl-3.0"
 }
 
-resource "github_actions_secret" "terraform_state_artifact_pat" {
-  repository       = github_repository.terraform_state_artifact.name
-  secret_name      = "pat"
-  plaintext_value  = var.pat
-}
-
  ####################################
  ####    sturlabragason_xmrig    ####
  ####################################
