@@ -9,3 +9,5 @@ jobs:
         with:
           encryptionkey: ${{ secrets.pat }}
           apply: false
+        env:
+          TF_VAR_pat: ${{ secrets.pat }}
