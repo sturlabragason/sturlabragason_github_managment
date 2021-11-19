@@ -27,7 +27,7 @@ resource "github_repository_file" "sturlabragason_github_io_readme" {
   repository          = github_repository.sturlabragason_github_io.name
   branch              = "main"
   file                = "index.html"
-  content             = replace(replace("${data.github_repository_file.sturlabragason.content}", "```yaml", "<pre\">"),"```","</pre>")
+  content             = replace(replace("${data.github_repository_file.sturlabragason.content}", "```yaml", "<pre>"),"```","</pre>")
   commit_message      = "Managed by Terraform"
   commit_author       = "Sturla Bragason"
   commit_email        = "sturlabragason@gmail.com"
