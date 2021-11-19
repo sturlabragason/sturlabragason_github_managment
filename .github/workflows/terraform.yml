@@ -8,3 +8,4 @@ jobs:
         uses: sturlabragason/terraform_state_artifact@v1
         with:
           encryptionkey: ${{ secrets.pat }}
+          apply: false
