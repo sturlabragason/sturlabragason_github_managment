@@ -4,46 +4,53 @@ jobs:
   Terraform:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: hashicorp/setup-terraform@v1
-    - id: download_artifact
-      uses: dawidd6/action-download-artifact@v2
+    - uses: sturlabragason/terraform_state_artifact@v1
       with:
-        github_token: ${{ secrets.pat }}
-        workflow: terraform.yml
-    - id: decrypt
-      # if: (needs.download_artifact.result == 'success')
-      run: |
-        mv ./state/terraform.tfstate.enc ./
-        openssl enc -d -in terraform.tfstate.enc -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate
-      env:
-        pat: ${{ secrets.pat }}
-    - name: Display structure of downloaded files
-      run: |
-        ls -R
-    - id: init
-      run: terraform init
-    - id: plan
-      run: terraform plan
-      env:
+        encryptionkey: ${{ secrets.pat }}
+        plan: true
+        apply: false
+      env: 
         TF_VAR_pat: ${{ secrets.pat }}
-    - id: apply
-      run: terraform apply -auto-approve
-      env:
-        TF_VAR_pat: ${{ secrets.pat }}
-    - id: encrypt
-      if: always()
-      run: |
-        openssl enc -in terraform.tfstate -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate.enc
-      env:
-        pat: ${{ secrets.pat }}
-    - uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: state
-        path: ./terraform.tfstate.enc
-    - uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: terraformstatefile
-        path: ./terraform.tfstate.enc
+    # - uses: actions/checkout@v2
+    # - uses: hashicorp/setup-terraform@v1
+    # - id: download_artifact
+    #   uses: dawidd6/action-download-artifact@v2
+    #   with:
+    #     github_token: ${{ secrets.pat }}
+    #     workflow: terraform.yml
+    # - id: decrypt
+    #   # if: (needs.download_artifact.result == 'success')
+    #   run: |
+    #     mv ./state/terraform.tfstate.enc ./
+    #     openssl enc -d -in terraform.tfstate.enc -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate
+    #   env:
+    #     pat: ${{ secrets.pat }}
+    # - name: Display structure of downloaded files
+    #   run: |
+    #     ls -R
+    # - id: init
+    #   run: terraform init
+    # - id: plan
+    #   run: terraform plan
+    #   env:
+    #     TF_VAR_pat: ${{ secrets.pat }}
+    # - id: apply
+    #   run: terraform apply -auto-approve
+    #   env:
+    #     TF_VAR_pat: ${{ secrets.pat }}
+    # - id: encrypt
+    #   if: always()
+    #   run: |
+    #     openssl enc -in terraform.tfstate -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate.enc
+    #   env:
+    #     pat: ${{ secrets.pat }}
+    # - uses: actions/upload-artifact@v2
+    #   if: always()
+    #   with:
+    #     name: state
+    #     path: ./terraform.tfstate.enc
+    # - uses: actions/upload-artifact@v2
+    #   if: always()
+    #   with:
+    #     name: terraformstatefile
+    #     path: ./terraform.tfstate.enc
