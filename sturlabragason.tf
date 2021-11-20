@@ -63,7 +63,7 @@ resource "github_repository" "terraform_state_artifact" {
   visibility       = "public"
   auto_init        = true
   topics           = ["terraform"]
-  homepage_url     = "https://github.com/sturlabragason/terraform_state_artifact"
+  homepage_url     = "https://github.com/marketplace/actions/terraform_state_artifact"
   license_template = "gpl-3.0"
 }
 
