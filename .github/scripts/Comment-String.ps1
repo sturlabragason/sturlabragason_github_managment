@@ -13,3 +13,4 @@ function Comment-String {
 }
 
 Comment-String -String "sturlabragason_xmrig"
+#
