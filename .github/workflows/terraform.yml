@@ -31,21 +31,14 @@ jobs:
       run: terraform apply -auto-approve
       env:
         TF_VAR_pat: ${{ secrets.pat }}
-    # - id: encrypt
-    #   if: always()
-    #   run: |
-    #     openssl enc -in terraform.tfstate -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate.enc
-    #   env:
-    #     pat: ${{ secrets.pat }}
-    - uses: sturlabragason/terraform_state_artifact@v1
-      with:
-        encryptionkey: ${{ secrets.pat }}
-        plan: false
-        apply: false
+    - id: encrypt
+      if: always()
+      run: |
+        openssl enc -in terraform.tfstate -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate.enc
       env:
-        TF_VAR_pat: ${{ secrets.pat }}
-    # - uses: actions/upload-artifact@v2
-    #   if: always()
-    #   with:
-    #     name: state
-    #     path: ./terraform.tfstate.enc
+        pat: ${{ secrets.pat }}
+    - uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: state
+        path: ./terraform.tfstate.enc
