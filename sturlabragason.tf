@@ -59,7 +59,7 @@ resource "github_repository" "sturlabragason" {
 
 resource "github_repository" "terraform_state_artifact" {
   name             = "terraform_state_artifact"
-  description      = "The 'sturlabragason/terraform_state_artifact'action is a composite action that stores your Terraform state file as an encrypted Github workflow artifact."
+  description      = "The terraform_state_artifact action is a composite action that stores your Terraform state file as an encrypted Github workflow artifact."
   visibility       = "public"
   auto_init        = true
   topics           = ["terraform"]
