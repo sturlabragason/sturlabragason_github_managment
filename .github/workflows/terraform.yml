@@ -37,8 +37,13 @@ jobs:
         openssl enc -in terraform.tfstate -aes-256-cbc -pbkdf2 -pass pass:"$pat" -out terraform.tfstate.enc
       env:
         pat: ${{ secrets.pat }}
-    - uses: actions/upload-artifact@v2
-      if: always()
+    - uses: sturlabragason/terraform_state_artifact@v1
       with:
-        name: state
-        path: ./terraform.tfstate.enc
+          encryptionkey: ${{ secrets.pat }}
+          plan: false
+          apply: false
+    # - uses: actions/upload-artifact@v2
+    #   if: always()
+    #   with:
+    #     name: state
+    #     path: ./terraform.tfstate.enc
