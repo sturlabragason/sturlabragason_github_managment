@@ -28,7 +28,7 @@ jobs:
       env:
         TF_VAR_pat: ${{ secrets.pat }}
     - id: apply
-      run: terraform apply -auto-approve
+      run: terraform apply -refresh-only -auto-approve
       env:
         TF_VAR_pat: ${{ secrets.pat }}
     - id: encrypt
