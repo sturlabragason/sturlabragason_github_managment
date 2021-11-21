@@ -73,14 +73,16 @@ resource "github_actions_secret" "terraform_state_artifact_pat" {
   plaintext_value  = var.pat
 }
 
- ####################################
- ####    sturlabragason_xmrig    ####
- ####################################
+ ########################################
+ ####    random_password_generator    ####
+ ########################################
 
- resource "github_repository" "sturlabragason_xmrig" {
-  name        = "sturlabragason_xmrig"
-  description = "A clone of xmrig with donations lowered."
-  visibility = "private"
-  auto_init = true
+resource "github_repository" "random_password_generator" {
+  name             = "random_password_generator"
+  description      = "The random_password_generator action is an action that generates an random password based on the Icelandic Sagas."
+  visibility       = "public"
+  auto_init        = true
+  topics           = ["encryption", "pwsh"]
+  homepage_url     = "https://github.com/marketplace/actions/random_password_generator"
   license_template = "gpl-3.0"
 }
