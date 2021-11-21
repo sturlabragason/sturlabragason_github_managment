@@ -12,6 +12,7 @@ jobs:
         TF_VAR_pat: ${{ secrets.pat }}
   terraform_job:
     runs-on: ubuntu-latest
+    needs: terraform_refresh_only_job
     steps:
     - uses: sturlabragason/terraform_state_artifact@v1
       with:
