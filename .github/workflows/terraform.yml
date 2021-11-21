@@ -1,7 +1,16 @@
 name: Setup and run Terraform
 on: [push]
 jobs:
-  Terraform:
+  terraform_refresh_only_job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: sturlabragason/terraform_state_artifact@v1
+      with:
+        encryptionkey: ${{ secrets.pat }}
+        custom_plan_flags: '-refresh-only'
+      env: 
+        TF_VAR_pat: ${{ secrets.pat }}
+  terraform_job:
     runs-on: ubuntu-latest
     steps:
     - uses: sturlabragason/terraform_state_artifact@v1
