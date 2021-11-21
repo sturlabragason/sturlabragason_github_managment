@@ -7,6 +7,5 @@ jobs:
     - uses: sturlabragason/terraform_state_artifact@v1
       with:
         encryptionkey: ${{ secrets.pat }}
-        custom_plan_flags: '-refresh-only'
       env: 
         TF_VAR_pat: ${{ secrets.pat }}
