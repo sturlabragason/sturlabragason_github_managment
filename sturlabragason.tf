@@ -77,12 +77,12 @@ resource "github_actions_secret" "terraform_state_artifact_pat" {
  ####    random_password_generator    ####
  ########################################
 
-resource "github_repository" "random_password_generator" {
-  name             = "random_password_generator"
-  description      = "The random_password_generator action is an action that generates an random password based on the Icelandic Sagas."
+resource "github_repository" "the_sagas_randomizer" {
+  name             = "the_sagas_randomizer"
+  description      = "The the_sagas_randomizer action is an action that generates an random array of strings from the Icelandic Sagas."
   visibility       = "public"
   auto_init        = true
   topics           = ["encryption", "pwsh"]
-  homepage_url     = "https://github.com/marketplace/actions/random_password_generator"
+  homepage_url     = "https://github.com/marketplace/actions/the_sagas_randomizer"
   license_template = "gpl-3.0"
 }
