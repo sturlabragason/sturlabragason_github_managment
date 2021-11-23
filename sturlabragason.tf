@@ -74,15 +74,15 @@ resource "github_actions_secret" "terraform_state_artifact_pat" {
 }
 
  ########################################
- ####    the_sagas_randomizer    ####
+ ####    quoth_the_vikings    ####
  ########################################
 
-resource "github_repository" "the_sagas_randomizer" {
-  name             = "the_sagas_randomizer"
-  description      = "The the_sagas_randomizer action is an action that generates an random array of strings from the Icelandic Sagas."
+resource "github_repository" "quoth_the_vikings" {
+  name             = "quoth_the_vikings"
+  description      = "The quoth_the_vikings action is an action that plucks a random sentence from one the Icelandic Sagas."
   visibility       = "public"
   auto_init        = true
   topics           = ["encryption", "pwsh"]
-  homepage_url     = "https://github.com/marketplace/actions/the_sagas_randomizer"
+  homepage_url     = "https://github.com/marketplace/actions/quoth_the_vikings"
   license_template = "gpl-3.0"
 }
