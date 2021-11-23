@@ -74,7 +74,7 @@ resource "github_actions_secret" "terraform_state_artifact_pat" {
 }
 
  ########################################
- ####    random_password_generator    ####
+ ####    the_sagas_randomizer    ####
  ########################################
 
 resource "github_repository" "the_sagas_randomizer" {
