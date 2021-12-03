@@ -100,7 +100,6 @@ resource "github_repository" "art_portfolio" {
   pages {
     source {
       branch = "main"
-      path   = "/"
     }
   }
 }
