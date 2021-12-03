@@ -97,10 +97,10 @@ resource "github_repository" "sturlabragason_playground" {
   description = "sturlabragason_playground web page"
   visibility = "public"
 
-  pages {
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
+  # pages {
+  #   source {
+  #     branch = "main"
+  #     path   = "/"
+  #   }
+  # }
 }
