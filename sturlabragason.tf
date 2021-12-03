@@ -74,7 +74,7 @@ resource "github_actions_secret" "terraform_state_artifact_pat" {
 }
 
  ########################################
- ####    quoth_the_vikings    ####
+ ####      quoth_the_vikings         ####
  ########################################
 
 resource "github_repository" "quoth_the_vikings" {
@@ -85,4 +85,23 @@ resource "github_repository" "quoth_the_vikings" {
   topics           = ["encryption", "pwsh"]
   homepage_url     = "https://github.com/marketplace/actions/quoth_the_vikings"
   license_template = "gpl-3.0"
+}
+
+
+ #########################################
+ ####    sturlabragason_playground    ####
+ #########################################
+
+resource "github_repository" "sturlabragason_playground" {
+  name        = "sturlabragason_playground"
+  description = "sturlabragason_playground web page"
+
+  private = false
+
+  pages {
+    source {
+      branch = "master"
+      path   = "/"
+    }
+  }
 }
