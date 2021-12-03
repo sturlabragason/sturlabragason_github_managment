@@ -98,10 +98,10 @@ resource "github_repository" "sturlabragason_playground" {
 
   private = false
 
-  # pages {
-  #   source {
-  #     branch = "master"
-  #     path   = "/"
-  #   }
-  # }
+  pages {
+    source {
+      branch = "master"
+      path   = "/"
+    }
+  }
 }
