@@ -97,10 +97,10 @@ resource "github_repository" "art_portfolio" {
   description = "art_portfolio web page"
   visibility = "public"
 
-  # pages {
-  #   source {
-  #     branch = "main"
-  #     path   = "/"
-  #   }
-  # }
+  pages {
+    source {
+      branch = "main"
+      path   = "/"
+    }
+  }
 }
