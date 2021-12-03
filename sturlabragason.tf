@@ -89,12 +89,12 @@ resource "github_repository" "quoth_the_vikings" {
 
 
  #########################################
- ####    sturlabragason_playground    ####
+ ####    art_portfolio    ####
  #########################################
 
-resource "github_repository" "sturlabragason_playground" {
-  name        = "sturlabragason_playground"
-  description = "sturlabragason_playground web page"
+resource "github_repository" "art_portfolio" {
+  name        = "art_portfolio"
+  description = "art_portfolio web page"
   visibility = "public"
 
   # pages {
