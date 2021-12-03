@@ -95,12 +95,11 @@ resource "github_repository" "quoth_the_vikings" {
 resource "github_repository" "sturlabragason_playground" {
   name        = "sturlabragason_playground"
   description = "sturlabragason_playground web page"
-
-  private = false
+  visibility = "public"
 
   pages {
     source {
-      branch = "master"
+      branch = "main"
       path   = "/"
     }
   }
