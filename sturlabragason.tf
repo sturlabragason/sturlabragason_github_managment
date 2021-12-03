@@ -92,15 +92,15 @@ resource "github_repository" "quoth_the_vikings" {
  ####    sturlabragason_playground    ####
  #########################################
 
-resource "github_repository" "sturlabragason_playground" {
-  name        = "sturlabragason_playground"
-  description = "sturlabragason_playground web page"
-  visibility = "public"
+# resource "github_repository" "sturlabragason_playground" {
+#   name        = "sturlabragason_playground"
+#   description = "sturlabragason_playground web page"
+#   visibility = "public"
 
-  # pages {
-  #   source {
-  #     branch = "main"
-  #     path   = "/"
-  #   }
-  # }
-}
+#   # pages {
+#   #   source {
+#   #     branch = "main"
+#   #     path   = "/"
+#   #   }
+#   # }
+# }
