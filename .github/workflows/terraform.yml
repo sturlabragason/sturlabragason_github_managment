@@ -15,7 +15,6 @@ jobs:
         custom_apply_flags: '-refresh-only'
       env: 
         TF_VAR_pat: ${{ secrets.pat }}
-        TF_VAR_api_key: ${{ secrets.api_key }}
   terraform_job:
     runs-on: ubuntu-latest
     needs: terraform_refresh_only_job
