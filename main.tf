@@ -4,6 +4,10 @@ terraform {
       source  = "integrations/github"
       version = "~> 4.0"
     }
+    random = {
+      source  = "hashicorp/terraform-provider-random"
+      version = "~> 3.1.0"
+    }
   }
 }
 

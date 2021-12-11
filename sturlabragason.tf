@@ -113,3 +113,12 @@ resource "github_repository" "art_portfolio" {
   description = "terraform_rest_module"
   visibility = "private"
 }
+
+resource "random_uuid" "terraform_rest_module_encryptionkey" {
+}
+
+resource "github_actions_secret" "terraform_rest_module_secret" {
+  repository       = github_repository.terraform_rest_module.name
+  secret_name      = "encryptionkey"
+  plaintext_value  = random_uuid.terraform_rest_module_encryptionkey.result
+}
