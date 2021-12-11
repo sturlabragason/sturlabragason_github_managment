@@ -103,3 +103,13 @@ resource "github_repository" "art_portfolio" {
     }
   }
 }
+
+ #####################################
+ ####    terraform_rest_module    ####
+ #####################################
+
+ resource "github_repository" "terraform_rest_module" {
+  name        = "terraform_rest_module"
+  description = "terraform_rest_module"
+  visibility = "private"
+}
