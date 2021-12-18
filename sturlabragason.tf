@@ -124,3 +124,14 @@ resource "github_actions_secret" "terraform_rest_module_secret" {
   secret_name      = "encryptionkey"
   plaintext_value  = random_password.terraform_rest_module_encryptionkey.result
 }
+
+ #########################
+ ####    metatopia    ####
+ #########################
+
+
+ resource "github_repository" "metatopia" {
+  name        = "metatopia"
+  description = "metatopia"
+  visibility = "private"
+}
