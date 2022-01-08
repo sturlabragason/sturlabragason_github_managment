@@ -135,3 +135,14 @@ resource "github_actions_secret" "terraform_rest_module_secret" {
   description = "metatopia"
   visibility = "private"
 }
+
+
+ #######################################
+ ####    sturlabragason_skipulag    ####
+ #######################################
+
+  resource "github_repository" "sturlabragason_skipulag" {
+  name        = "sturlabragason_skipulag"
+  description = "sturlabragason_skipulag"
+  visibility = "private"
+}

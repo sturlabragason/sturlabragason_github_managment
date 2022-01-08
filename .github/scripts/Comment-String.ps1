@@ -12,4 +12,4 @@ function Comment-String {
     Write-Host $CommentString
 }
 
-# Comment-String -String "sturlabragason_xmrig"
+# Comment-String -String "sturlabragason_skipulag"
