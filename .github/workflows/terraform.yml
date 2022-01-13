@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-    schedule:
-      - cron:  '11 11 11 * *'
+  schedule:
+    - cron:  '11 11 11 * *'
 jobs:
   terraform_refresh_only_job:
     runs-on: ubuntu-latest
