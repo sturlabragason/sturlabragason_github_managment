@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - foreach
     schedule:
       - cron:  '11 11 11 * *'
 jobs:
