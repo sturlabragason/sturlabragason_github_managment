@@ -24,3 +24,16 @@ jobs:
         encryptionkey: ${{ secrets.pat }}
       env: 
         TF_VAR_pat: ${{ secrets.pat }}
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+    - name: Render terraform docs and push changes back to PR
+      uses: terraform-docs/gh-actions@main
+      with:
+        working-dir: .
+        output-file: readme.md
+        output-method: inject
+        git-push: "true"
