@@ -146,3 +146,15 @@ resource "github_actions_secret" "terraform_rest_module_secret" {
   description = "sturlabragason_skipulag"
   visibility = "private"
 }
+ ################################
+ ####    terraform-tricks    ####
+ ################################
+
+resource "github_repository" "terraform-tricks" {
+  name             = "terraform-tricks"
+  description      = "terraform-tricks"
+  visibility       = "public"
+  auto_init        = true
+  topics           = ["terraform"]
+  license_template = "gpl-3.0"
+}
