@@ -33,9 +33,9 @@ No modules.
 | [github_repository.sturlabragason](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason_github_io](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason_skipulag](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
-| [github_repository.terraform-tricks](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_rest_module](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_state_artifact](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository.terraform_tricks](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository_file.sturlabragason_github_io_readme](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
 | [random_password.terraform_rest_module_encryptionkey](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [github_repository.sturlabragason_github_managment](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository) | data source |
