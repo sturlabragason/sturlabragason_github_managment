@@ -147,12 +147,12 @@ resource "github_actions_secret" "terraform_rest_module_secret" {
   visibility = "private"
 }
  ################################
- ####    terraform-tricks    ####
+ ####    terraform_tricks    ####
  ################################
 
-resource "github_repository" "terraform-tricks" {
-  name             = "terraform-tricks"
-  description      = "terraform-tricks"
+resource "github_repository" "terraform_tricks" {
+  name             = "terraform_tricks"
+  description      = "terraform_tricks"
   visibility       = "public"
   auto_init        = true
   topics           = ["terraform"]
