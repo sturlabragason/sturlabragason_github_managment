@@ -95,7 +95,7 @@ resource "github_repository" "quoth_the_vikings" {
 resource "github_repository" "art_portfolio" {
   name        = "art_portfolio"
   description = "art_portfolio web page"
-  visibility = "public"
+  visibility = "private"
 
   pages {
     source {
