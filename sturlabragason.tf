@@ -34,14 +34,14 @@ resource "github_repository_file" "sturlabragason_github_io_readme" {
       )
       , "```", "</pre>"
     ), <<EOF
-        <center>
+<center>
 
-        | Repository | Status |
-        |--|--|
-        | [`sturlabragason/sturlabragason_github_managment`](https://github.com/sturlabragason/sturlabragason_github_managment) | [![Setup and run Terraform](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml)   |
-        | [`sturlabragason/terraform_state_artifact`](https://github.com/sturlabragason/terraform_state_artifact) | [![Terraform State Artifact](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml)   |
+| Repository | Status |
+|--|--|
+| [`sturlabragason/sturlabragason_github_managment`](https://github.com/sturlabragason/sturlabragason_github_managment) | [![Setup and run Terraform](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml)   |
+| [`sturlabragason/terraform_state_artifact`](https://github.com/sturlabragason/terraform_state_artifact) | [![Terraform State Artifact](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml)   |
 
-        </center>
+</center>
     EOF
     , ""
   )
