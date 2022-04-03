@@ -13,6 +13,6 @@ terraform {
 
 # Configure the GitHub Provider
 provider "github" {
-    token = var.pat
-    owner   = "sturlabragason"
+  token = var.pat
+  owner = "sturlabragason"
 }
