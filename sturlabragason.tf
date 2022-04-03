@@ -84,12 +84,6 @@ resource "github_repository" "terraform_state_artifact" {
   license_template = "gpl-3.0"
 }
 
-resource "github_actions_secret" "terraform_state_artifact_pat" {
-  repository      = github_repository.terraform_state_artifact.name
-  secret_name     = "pat"
-  plaintext_value = var.pat
-}
-
 ########################################
 ####      quoth_the_vikings         ####
 ########################################
@@ -170,6 +164,20 @@ resource "github_repository" "sturlabragason_skipulag" {
 resource "github_repository" "terraform_tricks" {
   name             = "terraform_tricks"
   description      = "terraform_tricks"
+  visibility       = "public"
+  auto_init        = true
+  topics           = ["terraform"]
+  license_template = "gpl-3.0"
+}
+
+ #################################################
+ ####    terraform_cloud_github_connection    ####
+ #################################################
+
+
+resource "github_repository" "terraform_cloud_github_connection" {
+  name             = "terraform_cloud_github_connection"
+  description      = "The terraform_cloud_github_connection action is an action that connects your Github Repository to your Terraform Cloud."
   visibility       = "public"
   auto_init        = true
   topics           = ["terraform"]
