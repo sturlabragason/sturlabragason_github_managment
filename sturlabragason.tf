@@ -183,3 +183,13 @@ resource "github_repository" "terraform_cloud_github_connection" {
   topics           = ["terraform"]
   license_template = "gpl-3.0"
 }
+
+#######################################
+####    terraform_avd    ####
+#######################################
+
+resource "github_repository" "terraform_avd" {
+  name        = "terraform_avd"
+  description = "terraform_avd"
+  visibility  = "private"
+}
