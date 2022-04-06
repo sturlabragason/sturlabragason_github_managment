@@ -193,3 +193,13 @@ resource "github_repository" "terraform_avd" {
   description = "terraform_avd"
   visibility  = "private"
 }
+
+#######################################
+####    terraform_gh_bootstrap    ####
+#######################################
+
+resource "github_repository" "terraform_gh_bootstrap" {
+  name        = "terraform_gh_bootstrap"
+  description = "terraform_gh_bootstrap"
+  visibility  = "private"
+}
