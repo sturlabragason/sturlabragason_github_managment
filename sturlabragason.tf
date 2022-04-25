@@ -178,7 +178,7 @@ resource "github_repository" "terraform_tricks" {
 resource "github_repository" "terraform_cloud_github_connection" {
   name             = "terraform_cloud_github_connection"
   description      = "The terraform_cloud_github_connection action is an action that connects your Github Repository to your Terraform Cloud."
-  visibility       = "public"
+  visibility       = "private"
   auto_init        = true
   topics           = ["terraform"]
   license_template = "gpl-3.0"
