@@ -5,17 +5,14 @@ A repository which holds Terraform code for my Github. Uses the action [sturlabr
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 4.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.1.0 |
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | ~> 4.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.1.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | n/a |
 
 ## Modules
