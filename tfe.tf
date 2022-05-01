@@ -15,6 +15,6 @@ resource "tfe_oauth_client" "sturlabragason" {
 resource "github_actions_secret" "terraform_cloud_github_connection_public" {
   repository      = github_repository.terraform_cloud_github_connection_public.name
   secret_name     = "oauth_token_id"
-  plaintext_value = tfe_oauth_client.terraform_state_artifact.oauth_token_id
+  plaintext_value = tfe_oauth_client.sturlabragason.oauth_token_id
 }
 
