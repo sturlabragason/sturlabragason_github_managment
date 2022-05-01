@@ -170,23 +170,23 @@ resource "github_repository" "terraform_tricks" {
   license_template = "gpl-3.0"
 }
 
- #################################################
- ####    terraform_cloud_github_connection    ####
- #################################################
+#################################################
+####    terraform_cloud_github_connection    ####
+#################################################
 
 
 resource "github_repository" "terraform_cloud_github_connection" {
-  name             = "terraform_cloud_workspaces"
-  description      = "N/A"
-  visibility       = "private"
-  auto_init        = true
-  topics           = ["terraform"]
+  name        = "terraform_cloud_workspaces"
+  description = "N/A"
+  visibility  = "private"
+  auto_init   = true
+  topics      = ["terraform"]
 }
 
 
 #################################################
- ####    terraform_cloud_github_connection_public    ####
- #################################################
+####    terraform_cloud_github_connection_public    ####
+#################################################
 
 
 resource "github_repository" "terraform_cloud_github_connection_public" {

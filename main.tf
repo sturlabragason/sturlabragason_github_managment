@@ -1,18 +1,22 @@
 terraform {
   required_providers {
     github = {
-      source  = "integrations/github"
-      version = "~> 4.0"
+      source = "integrations/github"
     }
     random = {
-      source  = "hashicorp/random"
-      version = "~> 3.1.0"
+      source = "hashicorp/random"
+    }
+    tfe = {
+      source = "hashicorp/tfe"
     }
   }
 }
 
-# Configure the GitHub Provider
 provider "github" {
   token = var.pat
   owner = "sturlabragason"
+}
+
+provider "tfe" {
+  token = var.tfe
 }
