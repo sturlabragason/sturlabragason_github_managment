@@ -8,7 +8,7 @@ resource "tfe_oauth_client" "sturlabragason" {
   organization     = tfe_organization.sturlabragason.id
   api_url          = "https://api.github.com"
   http_url         = "https://github.com"
-  oauth_token      = var.tfe
+  oauth_token      = var.pat
   service_provider = "github"
 }
 
