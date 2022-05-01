@@ -190,7 +190,7 @@ resource "github_repository" "terraform_cloud_github_connection" {
 
 
 resource "github_repository" "terraform_cloud_github_connection_public" {
-  name             = "terraform_cloud_github_connection2"
+  name             = "terraform_cloud_github_connection"
   description      = "The terraform_cloud_github_connection action is an action that connects your Github Repository to your Terraform Cloud."
   visibility       = "public"
   auto_init        = true
