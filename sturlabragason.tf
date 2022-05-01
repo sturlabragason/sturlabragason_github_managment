@@ -176,9 +176,23 @@ resource "github_repository" "terraform_tricks" {
 
 
 resource "github_repository" "terraform_cloud_github_connection" {
-  name             = "terraform_cloud_github_connection"
-  description      = "The terraform_cloud_github_connection action is an action that connects your Github Repository to your Terraform Cloud."
+  name             = "terraform_cloud_workspaces"
+  description      = "N/A"
   visibility       = "private"
+  auto_init        = true
+  topics           = ["terraform"]
+}
+
+
+#################################################
+ ####    terraform_cloud_github_connection_public    ####
+ #################################################
+
+
+resource "github_repository" "terraform_cloud_github_connection_public" {
+  name             = "terraform_cloud_github_connection2"
+  description      = "The terraform_cloud_github_connection action is an action that connects your Github Repository to your Terraform Cloud."
+  visibility       = "public"
   auto_init        = true
   topics           = ["terraform"]
   license_template = "gpl-3.0"
