@@ -217,3 +217,12 @@ resource "github_repository" "terraform_gh_bootstrap" {
   description = "terraform_gh_bootstrap"
   visibility  = "private"
 }
+#######################################
+####    terraform_backstage    ####
+#######################################
+
+resource "github_repository" "terraform_backstage" {
+  name        = "terraform_backstage"
+  description = "terraform_backstage"
+  visibility  = "public"
+}
