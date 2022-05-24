@@ -225,5 +225,14 @@ resource "github_repository" "terraform_gh_bootstrap" {
 resource "github_repository" "github_workflow_apis" {
   name        = "github_workflow_apis"
   description = "github_workflow_apis"
+}
+
+#######################################
+####    terraform_backstage    ####
+#######################################
+
+resource "github_repository" "terraform_backstage" {
+  name        = "terraform_backstage"
+  description = "terraform_backstage"
   visibility  = "public"
 }

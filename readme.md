@@ -1,6 +1,6 @@
 # sturlabragason_github_managment
 
-A repository which holds Terraform code for my Github. Uses the action [sturlabragason/terraform_state_artifact](https://github.com/marketplace/actions/terraform_state_artifact).
+### A repository which holds Terraform code for my Github. Uses the action [sturlabragason/terraform_state_artifact](https://github.com/marketplace/actions/terraform_state_artifact).
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -32,6 +32,7 @@ No modules.
 | [github_repository.sturlabragason_github_io](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason_skipulag](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_avd](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository.terraform_backstage](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_cloud_github_connection](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_cloud_github_connection_public](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_gh_bootstrap](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
