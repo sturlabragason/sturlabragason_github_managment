@@ -217,3 +217,13 @@ resource "github_repository" "terraform_gh_bootstrap" {
   description = "terraform_gh_bootstrap"
   visibility  = "private"
 }
+
+#######################################
+####    github_workflow_apis    ####
+#######################################
+
+resource "github_repository" "github_workflow_apis" {
+  name        = "github_workflow_apis"
+  description = "github_workflow_apis"
+  visibility  = "public"
+}
