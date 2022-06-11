@@ -29,6 +29,7 @@ No modules.
 | [github_repository.github_workflow_apis](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.metatopia](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.quoth_the_vikings](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_repository.rsync_action](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason_github_io](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.sturlabragason_skipulag](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
