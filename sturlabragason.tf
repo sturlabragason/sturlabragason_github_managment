@@ -236,3 +236,14 @@ resource "github_repository" "terraform_backstage" {
   description = "terraform_backstage"
   visibility  = "public"
 }
+
+#######################################
+####    rsync_action    ####
+#######################################
+
+resource "github_repository" "rsync_action" {
+  name        = "rsync_action"
+  description = "rsync_action"
+  visibility  = "public"
+}
+
