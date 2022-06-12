@@ -236,3 +236,13 @@ resource "github_repository" "terraform_backstage" {
   description = "terraform_backstage"
   visibility  = "public"
 }
+
+#######################################
+####    org_access    ####
+#######################################
+
+resource "github_repository" "org_access" {
+  name        = "org_access"
+  description = "org_access"
+  visibility  = "public"
+}
