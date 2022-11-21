@@ -248,7 +248,7 @@ resource "github_repository" "org_access" {
 }
 
 #######################################
-####    tf-aws-session-manager    ####
+####    tf-aws-session-manager    #####
 #######################################
 
 resource "github_repository" "tf-aws-session-manager" {
