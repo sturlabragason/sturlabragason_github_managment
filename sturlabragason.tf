@@ -254,4 +254,5 @@ resource "github_repository" "org_access" {
 resource "github_repository" "tf-aws-session-manager" {
   name        = "tf-aws-session-manager"
   description = "tf-aws-session-manager"
+  visibility  = "private"
 }
