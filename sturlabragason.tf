@@ -17,38 +17,38 @@ resource "github_repository" "sturlabragason_github_io" {
   }
 }
 
-data "github_repository_file" "sturlabragason" {
-  repository = github_repository.sturlabragason.name
-  branch     = "main"
-  file       = "README.md"
-}
+# data "github_repository_file" "sturlabragason" {
+#   repository = github_repository.sturlabragason.name
+#   branch     = "main"
+#   file       = "README.md"
+# }
 
-resource "github_repository_file" "sturlabragason_github_io_readme" {
-  repository = github_repository.sturlabragason_github_io.name
-  branch     = "main"
-  file       = "index.html"
-  content = replace(
-    replace(
-      replace(
-        "${data.github_repository_file.sturlabragason.content}", "```yaml", "<pre>"
-      )
-      , "```", "</pre>"
-    ), <<EOF
-<center>
+# resource "github_repository_file" "sturlabragason_github_io_readme" {
+#   repository = github_repository.sturlabragason_github_io.name
+#   branch     = "main"
+#   file       = "index.html"
+#   content = replace(
+#     replace(
+#       replace(
+#         "${data.github_repository_file.sturlabragason.content}", "```yaml", "<pre>"
+#       )
+#       , "```", "</pre>"
+#     ), <<EOF
+# <center>
 
-| Repository | Status |
-|--|--|
-| [`sturlabragason/sturlabragason_github_managment`](https://github.com/sturlabragason/sturlabragason_github_managment) | [![Setup and run Terraform](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml)   |
-| [`sturlabragason/terraform_state_artifact`](https://github.com/sturlabragason/terraform_state_artifact) | [![Terraform State Artifact](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml)   |
+# | Repository | Status |
+# |--|--|
+# | [`sturlabragason/sturlabragason_github_managment`](https://github.com/sturlabragason/sturlabragason_github_managment) | [![Setup and run Terraform](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/sturlabragason_github_managment/actions/workflows/terraform.yml)   |
+# | [`sturlabragason/terraform_state_artifact`](https://github.com/sturlabragason/terraform_state_artifact) | [![Terraform State Artifact](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml/badge.svg)](https://github.com/sturlabragason/terraform_state_artifact/actions/workflows/terraform.yml)   |
 
-</center>
-    EOF
-    , ""
-  )
-  commit_message = "Managed by Terraform"
-  commit_author  = "Sturla Bragason"
-  commit_email   = "sturlabragason@gmail.com"
-}
+# </center>
+#     EOF
+#     , ""
+#   )
+#   commit_message = "Managed by Terraform"
+#   commit_author  = "Sturla Bragason"
+#   commit_email   = "sturlabragason@gmail.com"
+# }
 
 ###############################################
 ####    sturlabragason_github_managment    ####
