@@ -42,12 +42,10 @@ No modules.
 | [github_repository.terraform_state_artifact](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.terraform_tricks](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
 | [github_repository.tf-aws-session-manager](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
-| [github_repository_file.sturlabragason_github_io_readme](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository_file) | resource |
 | [random_password.terraform_rest_module_encryptionkey](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [tfe_oauth_client.sturlabragason](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/oauth_client) | resource |
 | [tfe_organization.sturlabragason](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/organization) | resource |
 | [github_repository.sturlabragason_github_managment](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository) | data source |
-| [github_repository_file.sturlabragason](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/repository_file) | data source |
 
 ## Inputs
 
